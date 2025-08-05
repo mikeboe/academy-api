@@ -4,6 +4,7 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import morgan from "morgan";
 import authRoutes from "./routes/auth";
+import coursesRoutes from "./routes/courses";
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -27,6 +28,7 @@ app.use(morgan("combined"));
 
 // Routes
 app.use("/auth", authRoutes);
+app.use("/courses", coursesRoutes);
 
 // Health check
 
